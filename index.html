@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Conceptual insight on what presence means</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Benjamin Cretois" />
+    <link rel="stylesheet" href="rutgers-tidyverse.css" type="text/css" />
+    <link rel="stylesheet" href="rutgers-fonts_og.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Conceptual insight on what presence means
+### Benjamin Cretois
+### NTNU, Dpt of Geography
+
+---
+
+
+class: inverse, center, middle
+
+# Background
+
+---
+# Background
+
+
+* "Presence" data are widely used by ecologists
+
+* From presences data we can derive **distribution**
+
+* **Distribution data** form the basis for biodiversity conservation and species management plans
+
+---
+# Background
+
+Typical **grided species distribution data**:
+
+--
+
+.center[
+![](index_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+]
+
+---
+# Background
+
+* **Distributional data** may be considered a poor source of information, especially when compared to **abundance data**
+
+--
+
+.center[
+![](index_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;![](index_files/figure-html/unnamed-chunk-2-2.png)&lt;!-- --&gt;
+]
+---
+# Background
+
+* Even if this is the case, **distributional data** are often the only available data on species ecologists have access to ...
+
+* On the bright side, since distributional data have been available for a long time a wide array of statistical tools exist to deal with it!
+
+* Nevertheless, **distributional data** are more complex than we can think and **distributions** can result from different process!
+
+
+---
+class: inverse, middle, center
+
+# A theoretical challenge
+
+---
+# A theoretical challenge
+
+* Even if this is the case, **distributional data** are often the only available data on species ecologists have access to ...
+
+--
+
+* On the bright side, since distributional data have been available for a long time a wide array of statistical tools exist to deal with it!
+
+--
+
+* Nevertheless, **distributional data** are more complex than we can think and **distributions** can result from different process!
+
+--
+
+.center[![](https://media.giphy.com/media/3oKHWa8DyEfPc3baCc/giphy.gif)]
+
+---
+# A theoretical challenge
+
+* If that sounds confusing this is normal.
+
+* The spatial statistic literature discuss different types of data that can be used to infer species distribution:
+
+--
+.center[
+
+Point pattern data
+
+Presence-only data
+
+Presence-absence data
+
+Count data
+
+]
+
+---
+# A theoretical challenge
+
+* For **presence / absence** data and **count data** we say that locations are **fixed**. This means that **we divide** a landscape into some plots (grids, quadrat) that we sample, **we go** at that location and **we observe**. 
+
+* If the species was detected we count it as **presence** and **absence** otherwise
+
+---
+# A theoretical challenge     
+
+* For **presence / absence** data and **count data** we say that locations are **fixed**. This means that **we divide** a landscape into some plots (grids, quadrat) that we sample, **we go** at that location and **we observe**. 
+
+* If the species was detected we count it as **presence** and **absence** otherwise
+
+--
+
+.center[
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/I_hope_she_won%27t_mind_my_leaving.jpg" width="400" height="300" /&gt;
+]
+
+---
+# A theoretical challenge
+
+* **Presence‐only data** and more generally **point pattern data** arises through randomly encountering a species within a region and is typically collected in the form of museum or citizen science data. 
+
+* We say that locations are **randomly distributed in space**
+
+--
+
+.center[
+![](index_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+]
+
+---
+# A theoretical challenge
+
+* Ecologists usually modelled these data with **presence / absence** methods, usually sampling **pseudo-absence** through the landscapes if they had **presence-only** data.
+
+--
+
+* **However**, because of these conceptual differences, some argue that each type of data has to be used (i.e. modelled) with different strategies. 
+
+--
+
+* **Moreover**, In the recent ecological science literature, it is asserted that a common modeling framework can be used for all data types, that presence/absence data modeling can be induced under a **presence‐only framework**.
+
+---
+class: inverse, middle, center
+
+# What does presence mean?
+
+![](https://media.giphy.com/media/5Y8y2ql1vF1J6qAHXW/giphy.gif)
+
+
+---
+# What does presence mean?
+
+* To understand **presence** we need to understand the concept of **absence**.
+
+--
+
+* First, a species can be absent from a place where environmental conditions meet the species’ requirements for diverse reasons
+
+--
+
+* A species can also be absent from an area because the environmental requirements at this location are not met and the species cannot survive.
+
+--
+
+* A final type of absence is due to the nature of distributional information which are very often incomplete and biased. We call this a **false absence**.
+---
+# What does presence mean?
+
+![](index_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+
+---
+# What does presence mean?
+
+* **False absences** can be the result of a multitude of reasons, the most common are **preferential sampling** or **failed detection**.
+
+* This constitute the most important source of uncertainty in SDM and is a main factor of statistical developments.
+
+* The definition of the concept of **"presence / absence"** hardly has a single answer.
+
+---
+# What does presence mean?
+
+* The definition of the concept of **"presence / absence"** hardly has a single answer.
+
+* The main question is whether **presence/absence is viewed as an event at point level or at areal level.**
+
+--
+
+.center[
+![](index_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+]
+
+---
+# What does presence mean?
+
+* A formal definition (Kery &amp; Royle, 2015) is that presence-absence is a quantity that is directly derived from abundance and that **both abundance and occurrence are simply areal summary of an underlying spatial point pattern**.
+
+* We can then assert that occurrence is equivalent to the event that there is **at least one “point” falling within a predetermined spatial unit** or that the abundance of these points in a spatial unit is greater than zero.
+
+* Nevertheless, one can argue that the presence / absence is a property of the observer and therefore of the point.
+
+---
+# What does presence mean?
+
+* I argue that the observation captures **“detection / non detection”** and not “presence / absence”.
+
+* **“detection / non detection”** becomes a property of the point (the observer) while **“presence / absence”** becomes a property of the area.
+
+* It follows that the actual or real distribution of a species is in fact never observed and we need to account for it. We call it a **latent state**.
+
+---
+class: inverse, middle, center
+
+# Towards a unified framework
+
+---
+# Towards a unified framework
+
+* A unified framework on species distribution rely on the implicit assumption that **the latent state** (i.e. the true species distribution) result from **an underlying spatial point process** (i.e. is a point pattern). In particular we need to assume the two following axioms:
+
+* 1) Species distributions are the **aggregated spatial locations of all individuals of the same species** across a geographic domain.
+
+* 2) The distribution **can be described as a spatial point** in which the local intensity (or density) of individuals varies.
+
+---
+# Towards a unified framework
+
+.center[
+Definition of a **point pattern**
+
+Definition of a **point process**
+]
+
+--
+
+* If we know the underlying point generating process, we can also specify a **mathematical relationship between density and occupancy** and how the relationship changes based on the cell area.
+
+* In other word, given the area of the cell A, we can count the number of points N and if N &lt; 1 then we can show that the cell can be considered as a “presence”.
+
+---
+class: inverse
+
+# Take home message:
+
+* The concept of **presence and absence** is more complicated than it seems
+
+* Even though there is a wide range of data type, the can be used (i.e. modelled) with a single framework.
+
+.center[
+&lt;img src="https://media.giphy.com/media/SGGD5WyDKPLwzbsurK/giphy.gif" width="400" height="400" /&gt;
+]
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
